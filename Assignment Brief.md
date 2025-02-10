@@ -62,7 +62,7 @@ accessed.<br>
 
 ## Design Requirements
 ### HTML Requirements
-1. Use semantic tags appropriately, such as &lt;header&gt, &lt;footer&gt, &lt;main&gt, and &lt;aside&gt.<br>
+1. Use semantic tags appropriately, such as &lt;header&gt;, &lt;footer&gt;, &lt;main&gt;, and &lt;aside&gt;.<br>
 2. Implement lists (&lt;ul&gt; or &lt;ol&gt;) for navigation menus where applicable.<br>
 3. Use tables for presenting organized data, if needed.<br>
 4. Include metadata in the <head> section, such as:<br>
