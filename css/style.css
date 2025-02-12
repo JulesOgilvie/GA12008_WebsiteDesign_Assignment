@@ -1,4 +1,4 @@
 html{
-  background: "assets/chalkboard.jpg", no-repeat center fixed;
-  background0size: cover;
+  background: url("assets/chalkboard.jpg"), no-repeat center fixed;
+  background-size: cover;
 }
