@@ -127,6 +127,20 @@ button {
   border-radius: 1em;
 }
 
+button a{
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+button:hover{
+  background-color: white;
+}
+
+button a:hover{
+  color: #CE5C5C;
+}
+
 footer{
   position: fixed;
   background-color: #CE5C5C;
