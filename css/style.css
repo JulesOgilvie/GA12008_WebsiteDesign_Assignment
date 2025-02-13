@@ -1,7 +1,77 @@
-html{
-  background-image: url("assets/chalkboard.jpg");
-  backround-repeat: no-repeat;
+@font-face {
+  font-family: chalk;
+  src: url('../assets/chalkFont.ttf') format('truetype');
+}
+
+body, html{
+  height: 100%;
+}
+
+html {
+  /* Set background image and properties */
+  background-image: url("../assets/chalkboard.jpg");
+  background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
+  background-color: black; /*adding in this to prevent white flash when loading bg image*/
+
+  /* Remove default margin and padding */
+  margin: 0;
+  padding: 0;
+
+  /* Set font family */
+  font-family: chalk, sans-serif;
+  color: white;
+}
+
+body{
+  margin:0;
+  padding: 0;
+}
+
+.topnav{
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  display: inline;
+}
+
+a{
+  padding: 8px;
+  text-decoration: none;
+  color: #CE5C5C;
+}
+
+a:hover{
+  color: white;
+}
+
+footer{
+  position: absolute;
+  bottom: 0; 
+  width: 100%;
+  height: 3em;
+}
+
+footer p{
+  display: flex;
+  justify-content: center;
+}
+
+h1, h1, h3, h4, h5, h6, p, a{
+  word-spacing: 0.5em;
 }
