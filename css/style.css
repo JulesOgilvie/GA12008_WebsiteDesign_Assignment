@@ -135,9 +135,6 @@ button a{
 
 button:hover{
   background-color: white;
-}
-
-button a:hover{
   color: #CE5C5C;
 }
 
