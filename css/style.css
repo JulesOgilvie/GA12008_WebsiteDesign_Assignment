@@ -99,6 +99,14 @@ main{
   flex-flow: row wrap;
 }
 
+#aboutText{
+  width:50%;
+}
+
+#aboutAside{
+  width:30%;
+}
+
 section{
   max-width: 70%;
   display:flex;
@@ -107,15 +115,50 @@ section{
   align-items: center;
 }
 
-.homeContent #profileImage{
+#profileImage{
   width: 25%;
   padding: 1em;
-  margin: 1em;
   float: left;
   clip-path: circle(35%);
 }
 
-#introduction p{
+#aboutcontent{
+  display:flex;
+  flex-flow: column wrap;
+}
+#aboutTitle{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#aboutText{
+  display: flex;
+  justify-content:start;
+  margin:1em;
+  padding:1em;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#aboutAside{
+  min-width:20em;
+  margin:1em;
+  padding:1em;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.art{
+  display:flex;
+  justify-content:space-around;
+  margin: 1em;
+}
+
+main p{
   font-family: Arial, Helvetica, sans-serif;
   word-spacing: normal;
   text-align: center;
@@ -142,6 +185,15 @@ button:hover{
   color: #CE5C5C;
 }
 
+.favouriteSong{
+  margin: 1em;
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
 footer{
   position: fixed;
   background-color: #CE5C5C;
@@ -155,10 +207,6 @@ footer p{
   justify-content: center;
 }
 
-h1, h1, h3, h4, h5, h6, p, a{
-  word-spacing: 0.5em; /*Spacing between words too small. This fixes that*/
-}
-
 @media screen and (max-width: 600px) {
   html, button{
     font-size: 3.2vw;
@@ -167,5 +215,8 @@ h1, h1, h3, h4, h5, h6, p, a{
   .topnav{
     display: flex;
     justify-content: center;
+  }
+  #aboutText, #aboutAside{
+    width: 90%;
   }
 }
