@@ -157,11 +157,12 @@ section{
   justify-content:space-around;
   margin: 1em;
   transition: transform .2s;
+  box-shadow: 0 0 0 0 black;
 }
 
 .art:hover{
   transform:scale(1.15);
-  box-shadow:0.5em 0.5em black;
+  box-shadow:0.5em 0.5em 0.25em 0.25em black;
 }
 
 main p{
