@@ -156,6 +156,12 @@ section{
   display:flex;
   justify-content:space-around;
   margin: 1em;
+  transition: transform .2s;
+}
+
+.art:hover{
+  transform:scale(1.15);
+  box-shadow:0.5em 0.5em black;
 }
 
 main p{
