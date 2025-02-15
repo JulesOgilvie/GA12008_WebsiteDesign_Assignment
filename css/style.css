@@ -162,7 +162,7 @@ section{
 
 .art:hover{
   transform:scale(1.15);
-  box-shadow:0.5em 0.5em 0.25em 0.25em black;
+  box-shadow:0.5em 0.5em 0.1em 0.1em black;
 }
 
 main p{
