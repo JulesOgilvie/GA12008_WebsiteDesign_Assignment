@@ -156,6 +156,7 @@ section{
   display:flex;
   justify-content:space-around;
   margin: 1em;
+  margin-bottom: 1.5em;
   transition: transform .2s;
   box-shadow: 0 0 0 0 black;
 }
