@@ -22,7 +22,44 @@
       </ul>
     </header>
 
-
+    <main>
+      <h2>Contact Me</h2>
+      <section class="maincontent" id="contactPage">
+        <section class="columnOne">
+          <p>You can contact me directly through the following methods:</p>
+          <section class="contactDetails">
+            <button><a href="mailto:2661105@dundee.ac.uk">E-mail</a></button>
+            <button><a href="https://www.linkedin.com/in/julesogilvie">LinkedIn</a></button>
+            <button><a href="https://github.com/JulesOgilvie">GitHub</a></button>
+            <button><a href="https://bsky.app/profile/redwolfe.is">BlueSky</a></button>
+          </section>
+        </section>
+  
+        <section class="columnTwo">
+          <p>Alternatively, you can use this form!</p>
+          <form>
+            <div>
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Banks" required>
+            </div>
+  
+            <div>
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="janebanks@email.com" required> <!--use pattern="" to validate email and :valid :invalid in css to change things depending on validity of email-->
+            </div>
+  
+            <div>
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message">I want to find out more!</textarea>
+            </div>
+  
+            <div>
+              <input type="submit" vaue="Submit">
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
     
     <!-- Footer section -->
     <footer class="footer">

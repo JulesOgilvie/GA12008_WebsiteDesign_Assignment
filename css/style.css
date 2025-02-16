@@ -9,13 +9,9 @@
 
 /*
 to do:
-- modify home image to look nice
 - put home text on a background (overlapping post it note?)
 - make button look nice
-
-- add about content
 - add portfolio content
-- add contact content
 
 cool pattern to use for portfolio:
 html {
@@ -60,6 +56,10 @@ body{
   padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6, a, p{
+  text-align: center;
+}
+
 .topnav{
   padding: 1em 1em;
   display: flex;
@@ -80,18 +80,25 @@ body{
   display: inline;
 }
 
-.topnav a{
+a{
   padding: 1em;
   text-decoration: none;
   color: #CE5C5C;
 }
 
-.topnav a:hover{
+a:hover{
   color: white;
 }
 
 main{
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+.mainContent{
   margin: 1em;
+  margin-bottom: 5em;
   padding: 1em;
   bottom: 15em;
   display: flex;
@@ -107,11 +114,20 @@ main{
   width:30%;
 }
 
-section{
+section, article{
   max-width: 70%;
   display:flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.columnOne, .columnTwo{
+  max-width: 50%;
+  padding: 1em;
+  margin: 1em;
+  display: flex;
+  flex-flow: column wrap;
   align-items: center;
 }
 
@@ -126,7 +142,7 @@ section{
   display:flex;
   flex-flow: column wrap;
 }
-#aboutTitle{
+.pageTitle{
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -172,6 +188,22 @@ main p{
   text-align: center;
 }
 
+#contactPage{
+  margin: 1em;
+  padding:1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#columnOne{
+  width: 50%;
+}
+
+#columnTwo{
+  width:50%;
+}
+
 #mainError{
   display:flex;
   flex-direction: column;
@@ -203,13 +235,28 @@ button a:hover{
   color: #CE5C5C;
 }
 
+.contactDetails{
+  display:flex;
+  flex-flow: row wrap;
+}
+
+.contactDetails button{
+  width: 10em;
+  margin: 1em;
+}
+
 .favouriteSong{
   margin: 1em;
   padding: 1em;
   width: 100%;
+  min-width:230px;
   display: flex;
   flex-direction: column;
   align-content: center;
+}
+
+.favouriteSong iframe{
+  height: 80px;
 }
 
 footer{
@@ -237,4 +284,5 @@ footer p{
   #aboutText, #aboutAside{
     width: 90%;
   }
+
 }
