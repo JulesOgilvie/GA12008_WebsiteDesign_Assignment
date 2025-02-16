@@ -1,74 +1,50 @@
-/*em is being used instead of pixels throughout this code to allow for device scaleability*/
+/* em is used instead of pixels for scalability across devices */
 
 @font-face {
   font-family: chalk;
   src: url('../assets/chalkFont.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal
+  font-style: normal;
 }
 
-/*
-to do:
-- put home text on a background (overlapping post it note?)
-- make button look nice
-- add portfolio content
-
-cool pattern to use for portfolio:
-html {
-  --s: 66px; --- control the size
-  --c1: #a4c2a8;
-  --c2: #f1c8d8;
-  
-  --_g: #0000 90deg,var(--c1) 0;
-  background: 
-    conic-gradient(from 90deg at 2px 2px,var(--_g)),
-    conic-gradient(from 90deg at 1px 1px,var(--_g)),
-    var(--c2);
-  background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);
-}
-
-*/
-
-body, html{
+/* Global Styles */
+body, html {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: chalk, sans-serif;
+  color: white;
 }
 
 html {
-  /* Set background image and properties */
   background-image: url("../assets/chalkboard.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  background-color: black; /*adding in this to prevent white flash when loading bg image*/
-
-  /* Remove default margin and padding */
-  margin: 0;
-  padding: 0;
-
-  /* Set font family */
-  font-family: chalk, sans-serif;
-  color: white;
+  background-color: black; /* Prevents white flash when loading bg image */
 }
 
-body{
-  margin:0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6, a, p{
+/* Headings and Text Alignment */
+h1, h2, h3, h4, h5, h6, a, p {
   text-align: center;
 }
 
-.topnav{
-  padding: 1em 1em;
+p{
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+/* Navigation Styles */
+.topnav {
+  padding: 1em;
   display: flex;
   justify-content: space-around;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   align-items: center;
 }
 
-.topnav ul{
+.topnav ul {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -76,140 +52,23 @@ h1, h2, h3, h4, h5, h6, a, p{
   padding: 0;
 }
 
-.topnav li{
+.topnav li {
   display: inline;
 }
 
-a{
+/* A tag styles */
+
+a {
   padding: 1em;
   text-decoration: none;
   color: #CE5C5C;
 }
 
-a:hover{
+a:hover {
   color: white;
 }
 
-main{
-  display: flex;
-  flex-flow: column wrap;
-  align-content: center;
-}
-
-.mainContent{
-  margin: 1em;
-  margin-bottom: 5em;
-  padding: 1em;
-  bottom: 15em;
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-}
-
-#aboutText{
-  width:50%;
-}
-
-#aboutAside{
-  width:30%;
-}
-
-section, article{
-  max-width: 70%;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.columnOne, .columnTwo{
-  max-width: 50%;
-  padding: 1em;
-  margin: 1em;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-}
-
-#profileImage{
-  width: 25%;
-  padding: 1em;
-  float: left;
-  clip-path: circle(35%);
-}
-
-#aboutcontent{
-  display:flex;
-  flex-flow: column wrap;
-}
-.pageTitle{
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#aboutText{
-  display: flex;
-  justify-content:start;
-  margin:1em;
-  padding:1em;
-  margin-top: 0;
-  padding-top: 0;
-}
-
-#aboutAside{
-  min-width:20em;
-  margin:1em;
-  padding:1em;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.art{
-  display:flex;
-  justify-content:space-around;
-  margin: 1em;
-  margin-bottom: 1.5em;
-  transition: transform .2s;
-  box-shadow: 0 0 0 0 black;
-}
-
-.art:hover{
-  transform:scale(1.15);
-  box-shadow:0.5em 0.5em 0.1em 0.1em black;
-}
-
-main p{
-  font-family: Arial, Helvetica, sans-serif;
-  word-spacing: normal;
-  text-align: center;
-}
-
-#contactPage{
-  margin: 1em;
-  padding:1em;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-#columnOne{
-  width: 50%;
-}
-
-#columnTwo{
-  width:50%;
-}
-
-#mainError{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Button Styles */
 button {
   background-color: #CE5C5C;
   color: white;
@@ -220,69 +79,332 @@ button {
   padding: 0.5em;
 }
 
-button a{
+button a {
   padding: 1em;
   text-decoration: none;
   color: white;
 }
 
-button:hover{
+button:hover {
   background-color: white;
   color: #CE5C5C;
 }
 
-button a:hover{
+button a:hover {
   color: #CE5C5C;
 }
 
-.contactDetails{
-  display:flex;
-  flex-flow: row wrap;
-}
-
-.contactDetails button{
-  width: 10em;
-  margin: 1em;
-}
-
-.favouriteSong{
-  margin: 1em;
-  padding: 1em;
-  width: 100%;
-  min-width:230px;
+/* Main Content */
+main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.mainContent {
+  margin: 1em 1em 4em 1em;
+  padding: 1em;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
   align-content: center;
 }
 
-.favouriteSong iframe{
-  height: 80px;
-}
-
-footer{
+/* Footer */
+footer {
   position: fixed;
   background-color: #CE5C5C;
-  bottom: 0; 
+  bottom: 0;
   width: 100%;
   height: 3em;
 }
 
-footer p{
+footer p {
   display: flex;
   justify-content: center;
 }
 
+/*-----------------------------------------------------------*/
+
+/*Home Page Specific Styles*/
+#aboutPage{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#home{
+  flex-flow: row wrap;
+}
+
+/* Profile Image */
+#introImage{
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+#profileImage {
+  width: 50%;
+  padding: 1em;
+  float: left;
+  clip-path: circle(35%);
+}
+
+#introduction{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 45%
+}
+
+#aboutPageRedirect{
+  width: 15em;
+}
+/*-----------------------------------------------------------*/
+
+/*About Page Specific Styles*/
+
+/* About Section */
+#aboutText, #aboutAside {
+  margin: 1em;
+  padding: 1em;
+}
+
+#aboutText {
+  width: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: start;
+}
+
+#aboutAside {
+  width: 30%;
+  min-width: 20em;
+  display: flex;
+  justify-content: center;
+}
+
+/* Sections & Articles */
+#aboutContent section, #aboutContent article {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Art Section */
+.art{
+  background-color: rgba(177, 177, 177, 0.994);
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 1em 1em 1em;
+  transition: transform .2s;
+  box-shadow: 0 0 0 0 black;
+}
+
+.art:hover{
+  transform: scale(1.15);
+  box-shadow: 0.5em 0.5em 0.1em 0.1em black;
+}
+
+/* Favorite Song Section */
+.favouriteSong {
+  margin: 1em;
+  padding: 1em;
+  width: 100%;
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favouriteSong iframe {
+  height: 80px;
+}
+
+/*-----------------------------------------------------------*/
+
+/* Portfolio Page Styles */
+#portfolioPage{
+  margin: 1em;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+}
+
+#portfolioTable{
+  width: 45%;
+}
+table{
+  margin: 1em;
+  padding: 1em;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td{
+  border: 2px solid;
+  padding: 0.5em;
+}
+
+.tableTitle, .tableSubtitle{
+  width: 100%;
+  text-align: center;
+}
+
+.tableContent td{
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: top;
+}
+
+#tablePaper{
+  background-image: "../assets/paper.jpg";
+  display: flex;
+  justify-content: center;
+
+  margin: 1em;
+  margin-bottom: 5em;
+}
+#portfolioAside {
+  width: 30%;
+  min-width: 20em;
+  display: flex;
+  justify-content: start;
+}
+
+#galleryTitle{
+  margin: 1em;
+  padding: 1em;
+}
+
+.galleryImg{
+  background-color: rgba(177, 177, 177, 0.994);
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 1em 1em 1em;
+  transition: transform .2s;
+  box-shadow: 0 0 0 0 black;
+}
+
+.galleryImg:hover{
+  transform: scale(1.15);
+  box-shadow: 0.5em 0.5em 0.1em 0.1em black;
+}
+
+.galleryImg p{
+  color: black;
+}
+
+/*-----------------------------------------------------------*/
+
+/* Contact Page Styles*/
+
+#contactPage {
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contactDetails {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.contactDetails button {
+  width: 10em;
+  margin: 1em;
+}
+
+.columnOne, .columnTwo {
+  max-width: 50%;
+  padding: 0 1em;
+  margin: 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contact Form */
+
+form{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+input, textarea {
+  border-radius: 4px;
+  width: 100%;
+  padding: 0.5em;
+}
+
+input:focus, textarea:focus{
+  border: 2px solid #CE5C5C;
+}
+
+.formItem{
+  margin: 0.5em;
+}
+
+.formItem label{
+  display: flex;
+  justify-content: center;
+}
+
+#formButton{
+  background-color: #CE5C5C;
+  color: white;
+  font-family: chalk, sans-serif;
+  border: none;
+  text-decoration: none;
+  border-radius: 1em;
+  padding: 0.5em;
+  width: 8em;
+}
+
+#formButton:hover{
+  background-color: white;
+  color: #CE5C5C;
+}
+
+/*-----------------------------------------------------------*/
+
+/* Responsive Design */
 @media screen and (max-width: 600px) {
-  html, button{
+  html, button {
     font-size: 3.2vw;
   }
 
-  .topnav{
+  .topnav {
     display: flex;
     justify-content: center;
   }
-  #aboutText, #aboutAside{
-    width: 90%;
+  .topnav ul {
+    display: flex;
+    flex-wrap: column wrap;
   }
 
+  .mainContent{
+    display: flex: 
+    flex-direction: column;
+  }
+
+  
+  #home, #aboutPage, #portfolioPage, #contactPage, #mainError{
+    flex-flow: column wrap;
+    align-items: center;
+    height: 100%;
+  }
+
+  #introduction{
+    align-items: start;
+  }
+
+  #aboutText, #aboutAside {
+    width: 90%;
+  }
 }
