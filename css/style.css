@@ -390,14 +390,15 @@ input:focus, textarea:focus{
 
   .mainContent{
     display: flex; 
-    flex-direction: column;
+    flex-flow: column wrap;
   }
 
   
-  #home, #aboutPage, #portfolioPage, #contactPage, #mainError{
+  #home, #aboutPage, #contactPage, #mainError{
     flex-flow: column wrap;
     align-items: center;
     height: 100%;
+
   }
 
   #introduction{
