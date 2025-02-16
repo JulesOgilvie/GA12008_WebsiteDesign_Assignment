@@ -389,7 +389,7 @@ input:focus, textarea:focus{
   }
 
   .mainContent{
-    display: flex: 
+    display: flex; 
     flex-direction: column;
   }
 
